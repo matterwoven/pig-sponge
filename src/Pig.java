@@ -26,7 +26,25 @@ public class Pig {
 
     // Implement your solution here!
     public static String pigLatin(String sentence) {
-        return null;
+        // When not a vowel, detect and convert to pig latin
+        String constructedPigLatin = "";
+        String[] splitUpWords = sentence.split(" ");
+        for (String word : splitUpWords) {
+            // words starting with a vowel unaltered
+            if (word.charAt(0) == 'a' || word.charAt(0) == 'e' || word.charAt(0) == 'i' || word.charAt(0) == 'o' || word.charAt(0) == 'u') {
+            }
+            else {
+                word += word.charAt(0);
+                word = word.substring(1);
+                word += "ay";
+            }    
+            word += " ";
+            // first moved to back
+            // a and y are added to the end (.push)
+            constructedPigLatin += word;
+        }
+        constructedPigLatin = constructedPigLatin.trim();
+        return constructedPigLatin;
     }
 
 
