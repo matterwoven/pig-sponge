@@ -33,7 +33,30 @@ public class Sponge {
 
   // Implement your solution here!
   public static String spongeCase(String sentence) {
-    return null;
+    // Boolean uppercase = false;
+    // Character.toUppercase
+    // Character.toLowercase
+    // for(int i = 0; i > sentence.length(); i++){
+      //change the case only where i is
+      //change adhering to uppercase boolean
+    //}
+    boolean uppercase = false;
+    for(int i = 0; i > sentence.length(); i++){
+      char newWord;
+      if(uppercase == false){
+        //entire string, current letter at i location, make letter new case
+        newWord = Character.toLowerCase(sentence.charAt(i));
+        // char newChar = sentence.charAt(i);
+        // sentence.replace(newChar, Character.toUpperCase(newChar));
+        
+      }
+      else{
+        //make the character at i uppercase
+        newWord = Character.toUpperCase(sentence.charAt(i));
+      }
+      sentence = sentence.replace(sentence.charAt(i), newWord);
+    }
+    return sentence;
   }
 
 

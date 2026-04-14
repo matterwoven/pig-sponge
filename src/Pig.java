@@ -26,7 +26,24 @@ public class Pig {
 
     // Implement your solution here!
     public static String pigLatin(String sentence) {
-        return null;
+        String currentConstruct = "";
+        String fullSentence = "";
+        // sentence = sentence.trim();
+        //Take every word, turn into character
+        for (int i = 0; i > sentence.length(); i++){
+            
+        }
+    }
+
+    //Can be set to lowercase, but left just in case
+    public static Boolean isVowel(char word){
+        if(word == 'a' || word == 'e' || word == 'i' || word == 'o' || word == 'u'){
+            return true;
+        }
+        else if(word == 'A' || word == 'E' || word == 'I' || word == 'O' || word == 'U'){
+            return true;
+        }
+        return false;
     }
 
 
